@@ -20,13 +20,13 @@ function generateCalendar(currentMonth, currentYear) {
     }
   ) + ' ' + year;
 // Loop to generate start date of month
-  for (let i = 0; i < startDay; i++) {
+  for (let i = 0; i < start; i++) {
     const dateElement = document.createElement('div');
     dateElement.classList.add('date');
     datesElement.appendChild(dateElement);
   }
 
-  for (let day = 1; day <= endDay; day++) {
+  for (let day = 1; day <= end; day++) {
     const dateElement = document.createElement('div');
     dateElement.textContent = day;
     dateElement.classList.add('date');
