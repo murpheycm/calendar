@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.calendar {  
+  max-width: 100%;
+  max-height: auto; 
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 0px;
+  background-color: #f2f2f2;  
+}
+
+.day {
+  padding: 5px;
+  font-weight: bold;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+}
+
+.date {
+  padding: 5px;
+  cursor: pointer;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc; /* Add this line */
+  border-bottom: 1px solid #ccc; /* Add this line */
+  border-top: 1px solid #ccc;
+  display: flex; /* Add this line */
+  align-items: flex-start; /* Add this line */
+  justify-content: flex-start; /* Add this line */
+  position: relative; /* Add this line */
+}
+
+.date:hover {
+  background-color: #f2f2f2;
+}
+
+.current-month {
+  font-weight: bold;
+}
+
+.event {
+  background-color: #f2f2f2;
+  color: black;
+  padding: 20px 5px 60px 5px;
+  border-radius: 3px;
+  font-size: 22px;
+  cursor: pointer;
+  align-content: center;
+}
+
+.has-event::after {
+  content: '\2022'; /* Unicode for a bullet point */
+  color: #FF5733; /* Choose a color for the indicator */
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.area {
+  width: 100%
+}
+
+
