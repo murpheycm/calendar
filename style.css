@@ -50,10 +50,6 @@ body {
   position: relative; /* Add this line */
 }
 
-.date:hover {
-  background-color: #f2f2f2;
-}
-
 .current-month {
   font-weight: bold;
 }
