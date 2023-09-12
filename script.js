@@ -39,8 +39,18 @@ generateCalendar(currentMonth,currentYear);
 
 nextBtn.addEventListener('click', () => {
   currentMonth++;
-}
+  if (currentMonth > 11) {
+    currentMonth = 0;
+    currentYear++;
+  }
+  generateCalendar(currentMonth, currentYear);
+});
 
 prevBtn.addEventListener('click', () => {
   currentMonth--;
-}
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  generateCalendar(currentMonth, currentYear);
+});
