@@ -10,6 +10,8 @@ function generateCalendar(month, year) {
   const dates = document.getElementById('dates');
   const firstDay = new Date(year, month, 1);
   const lastDay = new Date(year, month +1, 0);
+  const start = firstDay.getDay();
+  const end = lastDay.getDate();
 
   dates.innerHTML = '';
   monthYear.textContent = new Date(year, month).toLocaleString('default', 
@@ -17,6 +19,20 @@ function generateCalendar(month, year) {
       month: 'long'
     }
   ) + ' ' + year;
+// Loop to generate start date of month
+  for (let i = 0; i < startDay; i++) {
+    const dateElement = document.createElement('div');
+    dateElement.classList.add('date');
+    datesElement.appendChild(dateElement);
+  }
+
+  for (let day = 1; day <= endDay; day++) {
+    const dateElement = document.createElement('div');
+    dateElement.textContent = day;
+    dateElement.classList.add('date');
+    if (month === currentDate.getMonth() && year === currentDate.getFullYear() && day === currentDate.getDate()) {
+      dateElement.classList.add('current-month');
+  }
 }
 
 generateCalendar(currentMonth,currentYear);
