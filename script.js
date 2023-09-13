@@ -5,21 +5,19 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 // Function to create the calendar
-function generateCalendar(currentMonth, currentYear) {
+function generateCalendar(month, year) {
   const monthYear = document.getElementById('monthYear');
   const dates = document.getElementById('dates');
   const firstDay = new Date(year, month, 1);
-  const lastDay = new Date(year, month +1, 0);
+  const lastDay = new Date(year, month + 1, 0);
   const start = firstDay.getDay();
   const end = lastDay.getDate();
 
+
+  monthYear.textContent = new Date(year, month).toLocaleString('default', {month: 'long'}) + ' ' + year;
   dates.innerHTML = '';
-  monthYear.textContent = new Date(year, month).toLocaleString('default', 
-    {
-      month: 'long'
-    }
-  ) + ' ' + year;
-// Loop to generate start date of month
+  
+  // Loop to generate start date of month
   for (let i = 0; i < start; i++) {
     const dateElement = document.createElement('div');
     dateElement.classList.add('date');
@@ -33,7 +31,7 @@ function generateCalendar(currentMonth, currentYear) {
     if (month === currentDate.getMonth() && year === currentDate.getFullYear() && day === currentDate.getDate()) {
       dateElement.classList.add('current-month');
   }
-}
+};
 
 generateCalendar(currentMonth,currentYear);
 
