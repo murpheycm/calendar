@@ -28,9 +28,11 @@ function generateCalendar(month, year) {
     const dateElement = document.createElement('div');
     dateElement.textContent = day;
     dateElement.classList.add('date');
+    
     if (month === currentDate.getMonth() && year === currentDate.getFullYear() && day === currentDate.getDate()) {
       dateElement.classList.add('current-month');
-  }
+    };
+  };
 };
 
 generateCalendar(currentMonth,currentYear);
