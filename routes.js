@@ -39,3 +39,5 @@ async function nextSevenDays() => {
   const myJson = await response.json();
   console.log(myJSON);
 }
+
+module.export = specificCountry, allCountries, longWeekend, publicHoliday, nextSevenDays;
