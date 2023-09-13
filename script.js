@@ -3,17 +3,16 @@ let currentMonth = currentDate.getMonth();
 let currentYear = currentDate.getFullYear();
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const monthYear = document.getElementById('monthYear');
+const dates = document.getElementById('dates');
+const firstDay = new Date(year, month, 1);
+const lastDay = new Date(year, month + 1, 0);
+const start = firstDay.getDay();
+const end = lastDay.getDate();
+
 
 // Function to create the calendar
 function generateCalendar(month, year) {
-  const monthYear = document.getElementById('monthYear');
-  const dates = document.getElementById('dates');
-  const firstDay = new Date(year, month, 1);
-  const lastDay = new Date(year, month + 1, 0);
-  const start = firstDay.getDay();
-  const end = lastDay.getDate();
-
-
   monthYear.textContent = new Date(year, month).toLocaleString('default', {month: 'long'}) + ' ' + year;
   dates.innerHTML = '';
   
