@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <body>
   <div class="calendar">
     <div class="header">
       <button id="prevBtn">&lt;</button>
@@ -23,7 +23,7 @@
       <div class="day">Fri</div>
       <div class="day">Sat</div>
     </div>
-    <div class="dates" id="dates">
+    <div class="dates " id="dates">
         <div class="date" data-day="1">1</div>
         <div class="date" data-day="2">2</div>
        <div class="date" data-day="3">3</div>
@@ -32,6 +32,17 @@
         <div class="date" data-day="6">6</div>
         </div>
   </div>
+
+  <!-- Modal for Event Details -->
+  <div class="modal event show-modal hidden" id="eventModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="eventDate"></h2>
+      <textarea class="area" id="eventDescription"></textarea>
+      <button id="saveEventBtn">Save</button>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
